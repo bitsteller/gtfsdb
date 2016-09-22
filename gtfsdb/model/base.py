@@ -116,7 +116,7 @@ class _Base(object):
             directory = resource_filename('gtfsdb', 'data')
 
         records = []
-        file_path = os.path.join(directory, cls.filename)
+        file_path = os.path.join(directory, "gtfs", cls.filename)
         if os.path.exists(file_path):
             f = open(file_path, 'r')
             utf8_file = util.UTF8Recoder(f, 'utf-8-sig')
